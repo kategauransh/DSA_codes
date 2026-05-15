@@ -1,48 +1,22 @@
-package array;
-
-class rev {
-
-	public static void revv(int[] aar, int n) {
-		int ar[] = new int[n];
-		int j = 0;
-		for (int i = n - 1; i >= 0; i--) {
-			ar[j] = aar[i];
-			j++;
-		}
-		for (int i : ar) {
-			IO.print(i + " ");
-		}
-
-		IO.println();
-	}
-
-//------------------------------------------------------------
-
-	public static void twop(int[] arr, int n) {
-		int p1 = 0;
-		int p2 = n - 1;
-
-		while (p1 < p2) {
-			int temp = arr[p1];
-			arr[p1] = arr[p2];
-			arr[p2] = temp;
-			p1++;
-			p2--;
-		}
-
-		for (int i : arr) {
-			IO.print(i + " ");
-		}
-	}
-
+import java.util.Scanner;
+class Rev{
+public static void revs(String str){
+char[] ch=new char[str.length()];
+for(int i=0;i<str.length();i++){
+ch[i]=str.charAt(i);
 }
 
-public class Reverse {
+for(int i=str.length()-1;i>=0;i--){
+System.out.print(ch[i]+" ");
+}
+}
+}
 
-	void main() {
-		int arr[] = { 6, 5, 4, 3, 2, 1, };
-		int n = arr.length;
-		rev.revv(arr, n);
-		rev.twop(arr, n);
-	}
+public class Reverse{
+
+public static void main(String []args){
+Scanner sc=new Scanner(System.in);
+String str=sc.next();
+Rev.revs(str);
+}
 }
